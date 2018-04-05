@@ -1,0 +1,24 @@
+﻿   <!--MODAL WINDOW for emails received -->
+<div class="modal-dialog animated fadeInUp" ng-class="{fadeOut: startFade}" ng-hide="hideMe">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="cancel right button" data-dismiss="modal" aria-hidden="true" ng-click="cancel(); pane='messages'"><i class="fa fa-close"></i></button>
+            <h4>{{email.subject}}</h4>
+        </div>
+        <div class="modal-body">
+            <div class="delineated">
+                <p>
+                    <span id="cc">Date:</span>
+                    <time class="epoch" id="datereceived" datetime="{{email.timecreated * 1000 | date:'yyyy-MM-dd HH:mm:ss Z'}}">{{email.timecreated * 1000 | date:'dd MMM yyyy'}}</time>
+                    <br />
+                    <span id="cc">Time:</span>
+                    <time class="epoch" id="timereceived" datetime="{{email.timecreated * 1000 | date:'yyyy-MM-dd HH:mm:ss Z'}}">{{email.timecreated * 1000 | date:'HH:mm:ss'}}</time>
+                </p>
+                <p class="receivedmsgbody">{{email.fullmessage|split:'This is a copy':0}}</p>
+            </div>
+        </div>
+        <div class="modal-footer">
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,234 @@
+﻿/* *** BROOKES COLOURS  ***
+
+Primary colour palette
+LIME: #9eab05   CHARCOAL: #424a52   PINK: #d10373
+
+Secondary colour palette
+    PURPLE: #6a2150 
+    RED: #c70540
+    YELLOW: #e3ba12
+    GOLD: #f49103
+    AQUA: #0085a1
+    BLUE: #003896
+    GREEN: #006338
+
+Neutral colour palette
+    Mid grey: #adafaf
+    Light grey: #f3f3f3
+*/
+body {
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: none;
+    -webkit-user-select: none;
+	background-color:#E4E4E4;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #E4E4E4)
+    );
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+	
+    background-color:#32383d;
+    font-family: 'RobotoRegular', 'Droid Sans', 'Segoe UI', Segoe, 'San Francisco', 'Helvetica Neue', Helvetica, Arial, Geneva, sans-serif;
+    font-size:12px;
+}
+
+.event-wrapper:nth-child(odd), 
+.stripy li:nth-child(odd) {
+    background-color: #fff;
+}
+
+.event-wrapper:nth-child(even), 
+.stripy li:nth-child(even) {
+    background-color: #f3f3f3;
+}
+.tabrow li.selected {
+  background: #FFF;
+  color: #000;
+}
+.category-box, .about-box, .profile-box, .sectionheading {
+    color: #fff;
+}
+
+.category1 {
+    background-color: #0085a1; /* aqua */
+}
+
+.category2 {
+    background-color: #f49103; /* gold */
+}
+
+.category3 {
+    background-color: #006338; /* green */
+}
+
+.category4 {
+    background-color: #9eab05; /* lime */
+}
+
+.category5 {
+    background-color: #003896; /* blue */
+}
+
+.category6 {
+    background-color: #c70540; /* red */
+}
+
+.category7 {
+    background-color: #adafaf; /* mid-grey */
+}
+
+.category8 {
+    background-color: #424a52; /* charcoal */
+}
+
+.header {
+    background-color: #d10373;
+    color: #fff;
+	box-shadow: 0 3px 5px 0px #adafaf;
+}
+
+#menu {
+    box-shadow: -8px 0px 5px -5px #aaa;
+}
+
+.error, .help-block, .alert-danger {
+    color: #c70540;
+}
+
+.warning {
+    color: #e3ba12;
+    background-color: #424a52;
+}
+
+.success {
+    color: #4B946A;
+}
+
+.loader, .spinner {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #d10373; /* Brookes pink */
+}
+
+.strapline {
+    background-color: #6a2150;
+    color: #fff;
+}
+
+.help {
+    color: #0085a1;
+    background-color: transparent;
+}
+
+a.help:hover {
+    border-bottom: 1px solid transparent !important;
+    color: #d10373;
+}
+
+.sort, .subheading {
+    background-color: #adafaf;
+    color: #000;
+}
+
+.sync {
+    background-color: #f3f3f3;
+    color: #424a52;
+}
+
+.strapline a:hover, .sort a:hover, .sync a:hover, .what a:hover {
+    border-bottom: 1px solid #d10373;
+}
+
+.strapline a, .categories a {
+    color: #fff;
+    text-shadow: 1px 1px #424a52;
+}
+
+.strapline a:hover {
+    color: #adafaf;
+}
+
+.sort a, .sync a {
+    color: #000;
+}
+
+.sort a:hover, .sync a:hover {
+    color: #424a52;
+}
+
+
+.explanation {
+    background-color: #f3f3f3;
+    color: #000;
+}
+
+.overlay {
+	opacity: 0.7;
+	background: #424a52;
+}
+
+footer, .bottom {
+    background-color: #424a52;
+    color: #fff;
+	box-shadow:         0 -3px 5px 0px #adafaf;
+}
+footer a, .header a, .bottom a {
+    color: #ffffff;
+}
+
+footer a:hover, .bottom a:hover {
+    color: #ffffff;
+    border-bottom: 1px solid #9eab05;
+}
+
+/* forms */
+
+.unity {
+    background-color: #ffffff;
+    color: #424a52;
+}
+
+/* buttons */
+
+.button {
+    box-shadow: #adafaf 3px 2px 3px;
+    color: #fff;
+}
+
+.cta {                          /* call to action */
+    background-color: #d10373;
+    color: #fff;
+}
+
+.secondary {
+    background-color: #0085a1;
+    color: #FFFFFF;
+}
+
+.ok {
+    background-color: #4B946A;
+    color: #FFFFFF;
+}
+
+.cancel {
+    background-color: #c70540;
+    color: #FFFFFF;
+}
+
+
+/* inbox */
+
+.toolbar {
+    background-color: #adafaf;
+}

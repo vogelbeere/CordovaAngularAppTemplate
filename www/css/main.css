@@ -1,0 +1,712 @@
+﻿body {
+    overflow:hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.pane {
+    overflow: auto;
+    height: 74vh;
+    margin-bottom: 115px;
+    margin-top: 105px;
+    padding: 0.5em;
+}
+
+.topbar {
+    background-color: #424a52;
+    text-align: center;
+}
+
+.topbar button, footer button, .topbar a, .footer a {
+    border: 0;
+    background-color: transparent;
+    margin: 3px 4%;
+    color: #fff;
+    font-size: 180%;
+}
+
+.about-box, .profile-box, .category-box {
+    display: inline-table;
+    margin: 4px 1px 2px 1px;
+    padding: 6px;
+}
+
+.profile-box {
+    width: 44%;
+    vertical-align: top;
+}
+
+.category-box {
+    width: 44%;
+    text-align: center;
+}
+
+.about-box {
+    text-align: left;
+}
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+.toggle-menu {
+    font-size: 120%;
+}
+
+.menu {
+    background-color: #fff;
+    color: #424a52;
+    padding: 0;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 65%;
+    font-size: 120%;
+    height: 100%;
+}
+
+.menu a, .menu a:visited {
+    color: #38c;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    border-bottom: 1px solid #ccc;
+    padding: 3px 0;
+}
+
+h2 {
+    margin-bottom: 0.5em;
+}
+
+#btn_logout, #logout {
+    cursor: pointer;
+}
+
+.header h1 {
+    padding: 12px 0 0 6px;
+}
+
+.strapline, .sectionheading {
+    padding: 3px;
+    font-size: 1.2em;
+    margin: 12px 0 0;
+}
+
+.sectionheading {
+    cursor: pointer;
+}
+
+strong.strapline {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 0.25em;
+    cursor: pointer;
+}
+
+.sectionheading.open::after {
+    content: "🔻";
+    float:right;
+}
+
+.sectionheading.closed::after {
+    content: "►";
+    float:right;
+}
+
+a {
+    text-decoration: none;
+}
+
+#password {
+    margin-left: 12px;
+}
+
+a.help:hover {
+    border-bottom: 1px solid transparent !important;
+}
+
+.strapline a, .sort a, .sync a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.strapline a:hover, .sort a:hover, .sync a:hover, .what a:hover {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.strapline p, .sort p, .sync p {
+    margin-left: 1em;
+}
+
+.overlay {
+	position: fixed;
+	text-align: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 200;
+	opacity: 0.7;
+}
+
+footer, .bottom {
+    flex-wrap: wrap;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+    width: 100%;
+    padding: 6px;
+    font-size: 110%;
+    text-align: center;
+}
+
+footer h4, .footer p {
+    display: inline-block;
+}
+
+footer a, .header a, .bottom a {
+    text-decoration: none;
+}
+
+footer a:hover, .bottom a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid #9eab05;
+}
+
+.clear {
+    clear: both;
+}
+
+.right {
+    float: right;
+}
+
+.justify-right {
+    text-align: right;
+}
+
+.left {
+    float: left;
+}
+
+.centre, .center {
+    text-align: center;
+}
+
+.img-fingerprint {
+    margin: 2em 3em 0 3em;
+}
+
+.show-pane, .show-div, .show-lookup {
+    cursor: pointer;
+    background-color: transparent;
+    color: #fff;
+}
+
+#app-title .toggle-menu {
+    background-color: transparent;
+    color: #fff;
+}
+
+#menu .toggle-menu {
+    display: block;
+    background-color: transparent;
+    color: #38c;
+}
+
+.fixed-right {
+    right: 0;
+}
+
+.pane h2 {
+    margin-bottom: 12px;
+}
+
+.divider {
+    padding: 12px 0 0 0;
+    margin: 0;
+}
+
+/* news feed */
+
+.feed-icon {
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.feed-info {
+    display: inline-block;
+}
+
+/* forms */
+
+label, input, select {
+    display: inline-block;
+    margin: 0.5em;
+}
+
+.unity {
+    border-radius: 6px;
+    padding: 6px;
+}
+
+/* buttons */
+
+button {
+    border: 0;
+    cursor: pointer;
+}
+
+.button, input.ui-btn {
+   border-radius: 3px;
+    padding: 6px;
+    margin: 4px;
+    text-decoration: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.button:hover {
+    text-decoration: none;
+}
+
+.icon {
+    padding: 0 6px;
+}
+
+.ui-content {
+    font-size: 120%;
+    margin-bottom: 60px;
+}
+
+/* scroll bar */
+.ui-content.scroll 
+{
+	height: 100vh;
+	overflow: auto;
+}
+
+.scroll::-webkit-scrollbar-button
+{
+	width: 0;
+	height: 0;
+	display: none;
+}
+
+.scroll::-webkit-scrollbar-corner
+{
+	background: rgba(0,0,0,0.3);
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.scroll::-webkit-scrollbar
+{
+	width: 14px;
+	height: 14px;
+
+}
+
+.scroll::-webkit-scrollbar-thumb
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.1);
+}
+
+.scroll::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+/* responsive grid */
+
+.page-wrap {
+    flex-wrap: wrap;
+}
+
+.box,
+.menu-box
+{
+	display: inline-block;
+	padding: 0;
+	vertical-align: top;
+}
+
+.box h3 {
+    padding: 3px;
+}
+
+.one-col {
+    width: 48%;
+    display: inline-table;
+}
+
+.two-col {
+    width: 97%;
+    margin: 0 auto;
+}
+
+.inner-box {
+    padding: 6px;
+}
+
+.notification {
+    border-radius: 25%;
+    padding: 0 3px;
+    position: relative;
+    top: -6px;
+    right: -6px;
+    z-index: 1;
+}
+
+/* news feed */ 
+
+.feed-icon img {
+    border-radius: 50%;
+    transform: scale(0.75,0.75);
+    vertical-align: middle;
+}
+
+.event-wrapper {
+    border-bottom: 1px solid #ddd;
+    padding: 0.5em;
+}
+
+.event-wrapper:nth-child(odd), 
+.stripy li:nth-child(odd) {
+    background-color: #fff;
+}
+
+.event-wrapper:nth-child(even), 
+.stripy li:nth-child(even) {
+    background-color: #f3f3f3;
+}
+.large {
+    font-size: 150%;
+}
+
+.event {
+    border-radius: 15%;
+    background-color: #0085a1;
+    color: #fff;
+    padding: 3px 0 3px 4px;
+    margin-right: 6px;
+}
+
+ul.stripy {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.stripy li {
+    padding: 6px;
+}
+
+/* inbox */
+
+.ui-panel-inner {
+    padding: 0.75em 0 0 0.5em;
+}
+
+.notification {
+    border-radius: 25%;
+    padding: 0 3px;
+    position: relative;
+    top: -6px;
+    right: -6px;
+    z-index: 1;
+}
+
+.toolbar {
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.toolbar button {
+    width: 2em;
+}
+
+.explanation textarea {
+    width: 100%;
+    height: 10em;
+    margin-left: 5px;
+}
+
+#compose-message label {
+    font-size: 90%;
+    width: 50px;
+}
+
+.subject {
+    cursor: pointer;
+}
+
+.messages {
+    list-style-type: none;
+    margin-left: -3.5em;
+    margin-top: -1em;
+}
+
+.mailbox {
+    padding: 0.5em;
+    border-bottom: 1px solid #424a52;
+}
+
+.receivedmsgbody {
+    padding-right: 8px;
+    white-space: pre-wrap;
+    overflow-x: auto;
+}
+
+.newemail {
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+}
+
+.reademail {
+    background-color: #dedede;
+    color: #000;
+    font-weight: normal;
+}
+
+/* modal */
+
+.modal-dialog {
+    z-index: 500;
+    position: absolute;
+    width: 90%;
+    margin: 50px 5%;
+}
+
+.modal-content {
+   padding: 0 6px;
+    background-color: #fff;
+}
+
+.modal-header {
+    padding: 6px 6px 0 6px;
+}
+
+.modal-body {
+    padding: 0 6px;
+}
+
+.modal-footer {
+    padding: 0 6px 9px 6px;
+    text-align: right;
+}
+
+a[data-toggle] {
+    cursor: pointer;
+}
+
+.hide-overflow {
+    overflow: hidden;
+}
+
+
+.profile-box img {
+    height: 15vh;
+    width: 15vh;
+}
+
+/* tabs */
+.tabrow {
+  text-align: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 24px;
+}
+
+.tabrow li {
+  margin: 0 3px;
+  padding: 0 10px;
+  border: 1px solid #424a52;
+  background: #ccc;
+  display: inline-block;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  cursor: pointer;
+}
+
+.tabrow li.active {
+  background: #FFF;
+  color: #000;
+  z-index: 2;
+  border-bottom-color: #FFF;
+}
+
+.tabrow {
+  position: relative;
+}
+.tabrow:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #424a52;
+  z-index: 1;
+}
+
+.tabrow:before {
+  z-index: 1;
+}
+.tabrow li {
+    position: relative;
+  z-index: 0;
+}
+
+.tabcontent {
+    display: block;
+    border: 1px solid #424a52;
+    border-top: 0;
+    background-color: #fff;
+    color: #424a52;
+    padding: 0.75em;
+}
+
+
+/**
+ *   MEDIA QUERIES 
+ **/
+
+
+@media (max-width: 320px) {
+   .burst-12:before, .burst-12, .burst-12:after
+     {
+        width: 30px;
+        height: 30px;
+    }
+    
+    div.delineated p {
+        font-size: 90%;
+    }
+   
+    .bg-12:before, .bg-12, .bg-12:after {
+        width: 31px;
+        height: 31px;
+    }
+
+    body, input, select, textarea, button, .ui-btn {
+        font-size: 0.9em;
+        line-height: 1.1;
+    }
+
+    label, input[type=text], input[type=password], select {
+        display: inline; 
+        margin: 0.5em;
+        width: 57%;
+    }
+
+    .img-fingerprint {
+        height: 210px;
+        width: 140px;
+    }
+
+    .category-box {
+        height: 122px;
+    }
+
+    .ui-listview>.ui-li-static, .ui-listview>.ui-li-divider, .ui-listview>li>a.ui-btn {
+        font-size: 96%;
+    }
+
+    li.ui-li-static {
+        padding: .57em 1em !important;
+    }
+
+    div.awards {
+        padding: 0.5em;
+    }
+
+    .badge-drilldown, .badge {
+        font-size: 90%;
+    }
+
+    a[data-toggle], .modal-body {
+        font-size: 90%;
+    }
+
+    .ui-listview>.ui-li-static {
+        padding: .5em 1em !important;
+        font-size: 86.6%;
+    }
+}
+
+@media (min-width:321px) and  (max-width: 767px) {
+
+    .modal-body {
+        font-size: 90%;
+    }
+
+    #privacy label {
+        width: 85%;
+    }
+
+    li.ui-li-static {
+        padding: .57em 1em !important;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .header h1, .bottom {
+        font-size: 200%;
+    }
+
+    .ui-li-static a, 
+    .ui-panel-inner button.toggle-menu {
+        font-size: 135%;
+    }
+
+    #content h2 {
+        margin-top: 1.5em;
+        font-size: 200%;
+    }
+
+    .form-actions button {
+        margin-right: 50%;
+    }
+
+    #privacy button {
+        margin-right: 40%;
+        margin-top: 10%;
+    }
+
+    .modal-dialog {
+    width: 80%;
+    margin: 100px 10%;
+    }
+    
+    .box h3, h2.strapline {
+        font-size: 150%;
+        letter-spacing: 1px;
+    }
+
+    .modal-content p, .modal-content h4, .activity-caption {
+        font-size: 150%;
+    }
+
+    .modal-content button {
+        font-size: 180%;
+    }
+
+}

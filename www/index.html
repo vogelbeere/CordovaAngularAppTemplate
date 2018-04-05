@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+        <base href="/" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css"/>
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <link rel="stylesheet" type="text/css" href="css/colors.css"/>
+        <link rel="stylesheet" data-ng-href="css/{{ filename }}" />
+
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+        <link rel="stylesheet" type="text/css" href="css/animate.css" />
+        <script src="scripts/lib/jquery-3.1.0.min.js"></script>
+        <!-- load the json2 library (required for jstorage use) -->
+        <script src="scripts/lib/json2.js"></script>
+        <!-- load the jstorage library *-->
+        <script src="scripts/lib/jstorage.js"></script>
+        <!-- load the angular library -->
+        <script src="scripts/lib/angular.min.js"></script>
+        <script src="scripts/lib/angular-route.min.js"></script>
+        <script src="scripts/lib/angular-cookies.min.js"></script>
+        <script src="scripts/lib/angular-resource.min.js"></script>
+        <script src="scripts/lib/ui-bootstrap.min.js"></script>
+        <script src="scripts/lib/ui-bootstrap-tpls.min.js"></script>
+        <title>Cordova Angular App Template</title>
+    </head>
+    <body>
+        <div data-role="page" id="welcome-page">
+            <div id="controller-wrapper" ng-controller="loginCtrl">
+                <div class="overlay" ng-hide="hideOverlay">&nbsp;</div>
+                <div data-role="panel" id="menu" ng-hide="hideMenuPanel" class="animated slideInRight menu">
+                    <div class="ui-panel-inner">
+                        <ul data-role="listview" class="ui-listview">
+                            <li class="ui-li-static ui-body-inherit ui-first-child">
+                                <button data-rel="close" class="toggle-menu right" ng-click="doHideMenuPanel()"><i class="fa fa-close"></i></button>
+                                <a href="/home" ng-click="doHideMenuPanel()"><i class="fa fa-home"></i> Home</a>
+                            </li>
+                            <li class="ui-li-static ui-body-inherit">
+                                <a class="show-pane" href="/newsfeed" ng-click="doHideMenuPanel()">Newsfeed</a><br />
+                                List of events
+                            </li>
+                            <li class="ui-li-static ui-body-inherit">
+                                <a class="show-pane" href="/messages" ng-click="doHideMenuPanel()">Messages</a><br />
+                                Messages from Moodle
+                            </li>
+                            <li class="ui-li-static ui-body-inherit">
+                                <a class="show-pane" href="/categories" ng-click="doHideMenuPanel()">Categories</a><br />
+                                Groups of activities
+                            </li>
+                            <li class="ui-li-static ui-body-inherit">
+                                <a class="show-pane" href="/list" ng-click="doHideMenuPanel()">List of things</a><br />
+                                All the things in a list
+                            </li>
+                            <li class="ui-li-static ui-body-inherit">
+                                <a class="show-pane" href="/sections" ng-click="doHideMenuPanel()">Sections</a><br />
+                                Headings and sections
+                            </li>
+                            <li class="ui-li-static ui-body-inherit">
+                                <a class="show-pane" href="/about" ng-click="doHideMenuPanel()">About the app</a><br />
+                                Description of the app
+                            </li>
+                            <li class="ui-li-static ui-body-inherit">
+                                <a class="show-pane" href="/profile" ng-click="doHideMenuPanel()">Profile</a><br />
+                                User profile
+                            </li>
+                            <li class="ui-li-static ui-body-inherit">
+                                <a class="show-pane" href="/perspectives" ng-click="doHideMenuPanel()">Perspectives</a><br />
+                                User profile
+                            </li>
+                            <li class="ui-li-static ui-body-inherit">
+                                <a class="show-pane" href="/login" ng-click="logout()">Log out</a><br />
+                                Sign out of the app
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- /panel -->
+                <div data-role="header" class="header">
+
+                        <div class="topbar">
+                            <a href="/home" id="btn_home"><i class="fa fa-home"></i></a><!-- home -->
+                            <a href="" id="btn_back"><i class="fa fa-arrow-left"></i></a><!-- back -->
+                            <a href="" id="btn_info"><i class="fa fa-info-circle"></i></a><!-- about the app -->
+                            <a href="/settings" id="btn_settings"><i class="fa fa-cog"></i></a><!--  settings/preferences-->
+                            <a href="" id="btn_refresh"><i class="fa fa-refresh"></i></a><!-- refresh -->
+                        </div>
+
+                        <h1 id="app-title">
+                            <a href="/home" rel="external"><i class="fa fa-home"></i></a> <!-- this can be replaced with the logo of the app -->
+                            App name
+                            <button class="toggle-menu icon right" ng-hide="hideMenuButton" ng-click="showMenuPanel()">
+                                <i class="fa fa-navicon"></i>
+                            </button><!-- optional depending on whether you have a menu panel or not -->
+                        </h1>
+                        <h2 class="strapline">App subtitle</h2>
+                </div>
+            </div>
+            <div role="main" id="main" class="ui-content">
+                <div id="system-message" class=""></div>
+                <div id="success-message" class=""></div>
+
+                <div data-role="content" id="content">
+                    <!--Angular template content gets injected here-->
+                    <ng-view></ng-view>
+                </div>
+  
+                <footer>
+                    <a href="/newsfeed" id="btn_notify"><i class="fa fa-bell"></i></a><!-- notifications -->
+                    <a href="" id="btn_fave"><i class="fa fa-heart"></i></a><!-- favourites -->
+                    <a href="" id="btn_tags"><i class="fa fa-tags"></i></a><!-- tags -->
+                </footer>
+            </div>
+        </div>
+            
+            
+        <script type="text/javascript" src="scripts/app.js"></script>
+
+        <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+        <script type="text/javascript" src="scripts/index.js"></script>
+    </body>
+</html>

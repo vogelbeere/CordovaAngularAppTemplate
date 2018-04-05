@@ -1,0 +1,24 @@
+﻿<div class="pane hide-overflow animated fadeInUp">
+    <h2>Log in</h2>
+    <div class="default" ng-hide="hideMe" ng-class="className">{{PostDataResponse}}</div>
+    <div class="default" ng-hide="hideMe" ng-class="className">{{ResponseDetails}}</div>
+    <div id="loginform">
+
+        <div ng-show="error" class="alert alert-danger">{{error}}</div>
+        <form name="form" ng-submit="login()" role="form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" class="form-control" ng-model="username" required />
+                <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Username is required</span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" class="form-control" ng-model="password" required />
+                <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="button btn-danger ok right">Log in</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+﻿<div class="pane">
+    <span ng-repeat="email in emails | filter: 'newemail' |filter:query as unread"></span>
+    <h2>Messages <span class="notification right" ng-hide="!(unread.length)">{{unread.length}}</span> </h2>
+    <div id="inbox">
+        <div class="ui-panel-inner">
+            <div ng-hide="loadingFinished">
+                <i class="fa fa-spinner fa-pulse"></i>
+            </div>
+            <ul data-role="listview" class="messages animated slideInUp ">
+                <!--  ng-controller="myEmailsCtrl" -->
+                <li class="mailbox page-wrap {{email.status}}" ng-repeat="email in emails | orderBy : email.timecreated">
+                    <a data-toggle="modal" ng-click="openMsg(email)">
+                        <time class="epoch" datetime="{{email.timecreated * 1000 | date:'yyyy-MM-dd HH:mm:ss Z'}}">{{email.timecreated * 1000 | date:'dd MMM, HH:mm'}}</time><br />
+                        <span class="subject">{{email.subject}}</span>
+                    </a>
+                </li>
+                <li ng-show="loadingFinished"><span ng-show="!(emails).length">You have no notifications.</span></li>
+            </ul>
+        </div>
+    </div>
+</div>

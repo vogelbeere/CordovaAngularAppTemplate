@@ -1,0 +1,247 @@
+﻿/* *** BROOKES COLOURS  ***
+
+Primary colour palette
+LIME: #9eab05   CHARCOAL: #424a52   PINK: #d10373
+
+Secondary colour palette
+    PURPLE: #6a2150 
+    RED: #c70540
+    YELLOW: #e3ba12
+    GOLD: #f49103
+    AQUA: #0085a1
+    BLUE: #003896
+    GREEN: #006338
+
+Neutral colour palette
+    Mid grey: #adafaf
+    Light grey: #f3f3f3
+*/
+
+body {
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: none;
+    -webkit-user-select: none;
+	background-color:#E4E4E4;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #c1c1c1),
+        color-stop(0.51, #f6f6f6)
+    );
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+    font-family: 'RobotoRegular', 'Droid Sans', 'Segoe UI', Segoe, 'San Francisco', 'Helvetica Neue', Helvetica, Arial, Geneva, sans-serif;
+    font-size:12px;
+}
+
+.category-box, .sectionheading, .profile-box {
+    color: #fff;
+}
+
+.category1 {
+    background-color: #4ca9bd; /* aqua - tint of #0085a1 */ 
+}
+
+.category2 {
+    background-color: #f7b24e; /* gold - tint of #f49103 */
+}
+
+.category3 {
+    background-color: #4c9173; /* green - tint of #006338 */
+}
+
+.category4 {
+    background-color: #bbc450; /* lime - tint of #9eab05 */
+}
+
+.category5 {
+    background-color: #4c73b5; /* blue - tint of #003896 */
+}
+
+.category6 {
+    background-color: #d75079; /* red - tint of #c70540 */
+}
+
+.category7 {
+    background-color: #c5c7c7; /* mid-grey - tint of #adafaf */
+}
+
+.category8 {
+    background-color: #B3B6B9; /* charcoal - tint of #424a52 */
+}
+
+.header {
+    background-color: #9eab05;
+    color: #fff;
+	box-shadow: 0 3px 5px 0px #adafaf;
+}
+
+.notification {
+    background-color: #d75079;
+    color: #000;
+}
+
+.event-wrapper:nth-child(odd), 
+.stripy li:nth-child(odd) {
+    background-color: #fff;
+}
+
+.event-wrapper:nth-child(even), 
+.stripy li:nth-child(even) {
+    background-color: #EBEECD;
+}
+
+.event {
+    background-color: #8E9904;
+}
+
+#menu {
+    box-shadow: -8px 0px 5px -5px #aaa;
+}
+
+.error, .help-block, .alert-danger {
+    color: #c70540;
+}
+
+.warning {
+    background-color: #e3ba12;
+    color: #424a52;
+}
+
+.success {
+    color: #81b496;
+}
+
+.loader, .spinner {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #d10373; /* Brookes pink */
+}
+
+.strapline {
+    background-color: #424a52; 
+    color: #fff;
+}
+
+.help {
+    color: #4cad85;
+    background-color: transparent;
+}
+
+a.help:hover {
+    border-bottom: 1px solid transparent !important;
+    color: #d10373;
+}
+
+.sort, .subheading {
+    background-color: #adafaf;
+    color: #000;
+}
+
+.sync {
+    background-color: #f3f3f3;
+    color: #424a52;
+}
+
+.strapline a:hover, .sort a:hover, .sync a:hover, .what a:hover {
+    border-bottom: 1px solid #d10373;
+}
+
+.strapline a, .categories a {
+    color: #fff;
+    text-shadow: 1px 1px #424a52;
+}
+
+.strapline a:hover {
+    color: #adafaf;
+}
+
+.sort a, .sync a {
+    color: #000;
+}
+
+.sort a:hover, .sync a:hover {
+    color: #424a52;
+}
+
+
+.explanation {
+    background-color: #f3f3f3;
+    color: #000;
+}
+
+.overlay {
+	background: #424a52;
+}
+
+footer, .bottom {
+    background-color: #424a52;
+    color: #fff;
+	box-shadow:         0 -3px 5px 0px #adafaf;
+}
+footer a, .header a, .bottom a {
+    color: #ffffff;
+}
+
+footer a:hover, .bottom a:hover {
+    color: #ffffff;
+    border-bottom: 1px solid #9eab05;
+}
+
+/* forms */
+
+.unity {
+    background-color: #ffffff;
+    color: #424a52;
+}
+
+.tabrow li.selected {
+  background: #f3f3f3;
+  color: #000;
+  border-bottom: 1px #f3f3f3 solid ;
+}
+
+div.selected {
+  background: #f3f3f3;
+  color: #000;
+}
+
+/* buttons */
+
+.button {
+    box-shadow: #adafaf 3px 2px 3px;
+    color: #fff;
+}
+
+.cta {                          /* call to action */
+    background-color: #de4e9d;
+    color: #fff;
+}
+
+.secondary {
+    background-color: #4cad85;
+    color: #000;
+}
+
+.ok {
+    background-color: #81b496;
+    color: #000;
+}
+
+.cancel {
+    background-color: #d75079;
+    color: #000;
+}
+
+/* inbox */
+
+.toolbar {
+    background-color: #adafaf;
+}
